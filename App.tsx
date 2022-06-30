@@ -8,6 +8,8 @@
  * @format
  */
 
+import { MagicBellProvider } from "@magicbell/react-headless";
+import Bell from './Bell';
 import React from 'react';
 import {
   SafeAreaView,
@@ -74,6 +76,12 @@ const App = () => {
           style={{
             backgroundColor: isDarkMode ? Colors.black : Colors.white,
           }}>
+          <MagicBellProvider
+            apiKey="df24a28e8921181f6c4220fc306ba76701592d21"
+            userEmail="josue@magicbell.io"
+          >
+            <Bell />
+          </MagicBellProvider>
           <Section title="Step One">
             Edit <Text style={styles.highlight}>App.tsx</Text> to change this
             screen and then come back to see your edits.
